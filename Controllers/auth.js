@@ -1,3 +1,4 @@
+const { sign } = require('crypto');
 const express=require('express');
 const router=express.Router();
 const path=require('path');
@@ -6,16 +7,15 @@ const rootDir=path.dirname(process.mainModule.filename);
 
 
 const signinController=(req,res)=>{
-    //console.log(rootDir);
 return(
-    res.sendFile(path.join(rootDir,"views","login.html"))
-    
+    //res.sendFile(path.join(rootDir,"views","signin.ejs"))
+    res.render('signin')
 );
 }
 
 const signupController=(req,res)=>{
     return(
-        res.send("<h1>Welcome to SIGNUP Page BAlle Balle</h1>")
+        res.render('signup')
     );
 }
 
