@@ -6,5 +6,4 @@ const {signinController,signupController}=require("../Controllers/auth.js");
 
 router.get('/signin',signinController);
 router.get('/signup',signupController);
-
 module.exports=router;
