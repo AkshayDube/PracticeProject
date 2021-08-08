@@ -19,7 +19,12 @@ const signupController=(req,res)=>{
     );
 }
 
+const adminController=(req,res)=>{
+    return (res.render('adminlogin'));
+}
+
 module.exports={
     signinController,
-    signupController
+    signupController,
+    adminController
 }

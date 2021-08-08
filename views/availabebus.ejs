@@ -1,0 +1,29 @@
+<%- include('includes/start.ejs') %>
+</head>
+<body>
+    <h1 class="h1 text-center mb-4">Availabe Buses</h1>
+    <div class="container">
+        <% availablebuses.forEach(function( eachBus){ %>
+            <form method="POST" action="/api/filldetails">
+                <input type="text" name="source" value="<%= eachBus.source %>" hidden >
+                <input type="text" name="destination" value="<%= eachBus.destination %>" hidden >
+                <input type="text" name="category" value="<%= eachBus.category %>" hidden >
+                <input type="text" name="name" value="<%= eachBus.name %>" hidden >
+                <input type="number" name="price" value="<%= eachBus.price %>" hidden >
+                <input type="number" name="remaining_seats" value="<%= eachBus.remaining_seats %>" hidden >
+
+            <ul class="row border border-success mb-5 bg-info list-unstyled align-items-center">
+            <li class="col-2 text-center border-danger border-right"><span class="text-danger font-weight-bold ">Name</span><br><br><%= eachBus.name %> </li>
+            <li class="col-2 text-center border-danger border-right"><span class="text-danger font-weight-bold">Route</span><br><br><%= eachBus.source %> To <%= eachBus.destination %> </li>
+            <li class="col-2 text-center border-danger border-right"><span class="text-danger font-weight-bold">Category</span><br><br><%= eachBus.category %> </li>
+            <li class="col-2 text-center border-danger border-right"><span class="text-danger font-weight-bold">Price</span><br><br><%= eachBus.price %> </li>
+            <li class="col-2 text-center border-danger border-right"><span class="text-danger font-weight-bold">Remaining_seats</span><br><br><%= eachBus.remaining_seats %> </li>
+            <button type="submit" class="btn btn-success col-2 text-center ">BOOK NOW</button>
+            </ul>
+            </form>   
+        <% }) %>
+     
+    
+    </div>
+</body>
+</html>

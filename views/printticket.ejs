@@ -1,0 +1,50 @@
+<%- include('includes/start.ejs') %>
+</head>
+<body>
+    <h1 class="h1 text-center text-primary">Ticket Details</h1>
+    <form class="container mt-5" action="" method="POST">
+        <div class="row">
+        <div class="mb-3 col-6">
+            <label for="busName" class="form-label">Bus Name</label>
+            <input type="text" class="form-control" id="busName" name="name" required value="<%= name %>" disabled>
+        </div>
+        <div class="mb-3 col-6">
+            <label for="category" class="form-label">Category</label>
+            <input type="text" class="form-control" id="category" name="category" required value="<%= category %>" disabled>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="mb-3 col-6">
+            <label for="source" class="form-label">Source</label>
+            <input type="text" class="form-control" id="source" name="source" required value="<%= source %>" disabled>
+        </div>
+        <div class="mb-3 col-6">
+            <label for="destination" class="form-label">Destination</label>
+            <input type="text" class="form-control" id="destination" name="destination" required value="<%= destination %>" disabled>
+        </div>
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-6">
+                <label for="Adult_Members" class="form-label">Adult_Members_Count</label>
+                <input type="number" class="form-control" id="Adult_Members" name="adult" required  value="<%= adult %>" disabled>
+            </div>
+            <div class="mb-3 col-6">
+                <label for="kids" class="form-label">Kids_Count</label>
+                <input type="number" class="form-control" id="kids" name="kids" required  value="<%= kids %>" disabled>
+            </div>
+        </div>    
+        <div class="row">
+            <div class="mb-3 col-6">
+                <label for="Total Price" class="form-label">Total Price</label>
+                <input type="number" class="form-control" id="price" name="price" required  value="<%= total_price %>" disabled>
+            </div>
+        </div>
+        <div class="row">
+            <button onclick="window.print()">Print Ticket</button>
+        </div>    
+    </form>
+    
+
+</body>

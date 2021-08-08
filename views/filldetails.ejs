@@ -1,0 +1,43 @@
+<%- include('includes/start.ejs') %>
+</head>
+<body>
+    <form class="container mt-5" action="/api/payment" method="POST">
+        <div class="row">
+        <div class="mb-3 col-6">
+            <label for="busName" class="form-label">Bus Name</label>
+            <input type="text" class="form-control" id="busName" name="name" required value="<%= name %>" >
+        </div>
+        <div class="mb-3 col-6">
+            <label for="category" class="form-label">Category</label>
+            <input type="text" class="form-control" id="category" name="category" required value="<%= category %>" >
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="mb-3 col-6">
+            <label for="source" class="form-label">Source</label>
+            <input type="text" class="form-control" id="source" name="source" required value="<%= source %>" >
+        </div>
+        <div class="mb-3 col-6">
+            <label for="destination" class="form-label">Destination</label>
+            <input type="text" class="form-control" id="destination" name="destination" required value="<%= destination %>">
+            <input type="price" class="form-control" id="price" name="price" required value="<%= price %>" hidden>
+
+        </div>
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-6">
+                <label for="Adult_Members" class="form-label">Adult_Members_Count</label>
+                <input type="number" class="form-control" id="Adult_Members" name="adult" required min="0">
+            </div>
+            <div class="mb-3 col-6">
+                <label for="kids" class="form-label">Kids_Count</label>
+                <input type="number" class="form-control" id="kids" name="kids" required min="0">
+            </div>
+        </div>    
+        <button type="submit" class="btn btn-primary">Make Payment</button>
+    </form>
+    
+
+</body>

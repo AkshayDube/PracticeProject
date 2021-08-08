@@ -1,0 +1,57 @@
+<%- include('../includes/start.ejs') %>
+</head>
+<body>
+<h1 class="h1 text-center text-secondary">Add New Bus</h1>
+<form class="container mt-5" action="/admin/addBus" method="POST">
+    <div class="mb-3">
+        <label for="exampleName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleName" name="name" placeholder="Enter Bus Name" required>
+    </div>
+    <div class="form-group">
+        <label for="locationFrom">Source</label>
+        <select id="locationFrom" class="form-control" name="source">
+          <option selected>Select a City</option>
+          <option value="Aligarh">Aligarh</option>
+          <option value="Agra">Agra</option>
+          <option value="Mathura">Mathura</option>
+          <option value="Lucknow">Lucknow</option>
+          <option value="Sultanpur">Sultanpur</option>
+          <option value="Basti">Basti</option>
+          <option value="Varanasi">Varanasi</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="locationTo">Destination</label>
+        <select id="locationTo" class="form-control" name="destination">
+          <option selected>Select a City</option>
+          <option value="Aligarh">Aligarh</option>
+          <option value="Agra">Agra</option>
+          <option value="Mathura">Mathura</option>
+          <option value="Lucknow">Lucknow</option>
+          <option value="Sultanpur">Sultanpur</option>
+          <option value="Basti">Basti</option>
+          <option value="Varanasi">Varanasi</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select id="locationTo" class="form-control" name="category">
+          <option selected>Select Bus Category</option>
+          <option value="NON-AC SITTING">NON-AC SITTING</option>
+          <option value="AC SITTING">AC SITTING</option>
+          <option value="AC SLEEPER">AC SLEEPER</option>
+          <option value="DELUXE">DELUXE</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" class="form-control" id="price" name="price" placeholder="Enter Fare Price" min="100" required>
+    </div>
+
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>

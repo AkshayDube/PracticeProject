@@ -1,0 +1,19 @@
+<%- include('includes/start.ejs') %>
+<h1 class="h1 text-center">Admin Login</h1>
+<div class="container">
+<div class="col-6 offset-3 mt-5">    
+<form class="justify-content-center" method="POST" action="/admin/home">
+    <div class="form-group">
+      <label for="inputEmail">Email address</label>
+      <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="InputPassword">Password</label>
+      <input type="password" class="form-control" name="password" id="InputPassword" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>  
+</div>  
+</body>
+</html>
